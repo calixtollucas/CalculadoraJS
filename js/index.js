@@ -3,7 +3,12 @@ var result = document.getElementById('resultado');
 function inserirNumero(input){
 
     let r = result.innerHTML;
-    result.innerHTML = r+input;
+
+    if (isNaN(input) && result.innerHTML.charAt(0) == ''){
+        result.innerHTML = '';
+    } else {
+        result.innerHTML = r+input;
+    }
 
 }
 
